@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spice Paradise</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+
+    {{template "nav" . }}
+
+    {{if .Message}}
+        <p style="color: green; text-align: center; background-color: #e6ffe6; padding: 10px; border-radius: 5px; margin: 15px auto; max-width: 80%;">{{.Message}}</p>
+    {{end}}
+    {{if .Error}}
+        <p style="color: red; text-align: center; background-color: #ffe6e6; padding: 10px; border-radius: 5px; margin: 15px auto; max-width: 80%;">{{.Error}}</p>
+    {{end}}
+
+    <section id="home" class="hero">
+        <h1>Welcome to Spice Paradise</h1>
+        <p>Experience the finest Indian cuisine, bursting with flavors and spices!</p>
+        <a href="/menu" class="btn">Explore Our Menu</a>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Spice Paradise</h2>
+            <p>Spice Paradise is a family-owned Indian restaurant offering the best in authentic Indian cuisine. 
+            We pride ourselves on our rich spices, delicious curries, and friendly atmosphere. 
+            Our team is committed to making every meal a memorable experience.</p>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>© {{.Year}} Spice Paradise. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Table - Spice Paradise</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    
+    {{template "nav" . }}
+
+  {{if .Message}}
+      <p style="color: green; text-align: center; background-color: #e6ffe6; padding: 10px; border-radius: 5px; margin: 15px auto; max-width: 80%;">{{.Message}}</p>
+  {{end}}
+  {{if .Error}}
+      <p style="color: red; text-align: center; background-color: #ffe6e6; padding: 10px; border-radius: 5px; margin: 15px auto; max-width: 80%;">{{.Error}}</p>
+  {{end}}
+
+    <section class="hero" style="background-image: url('/static/img/slider2.jpg' );">
+        <div class="overlay" text-align="center">
+            <h1>Book a Table at Spice Paradise</h1>
+            <p>Reserve your table and enjoy an unforgettable dining experience!</p>
+        </div>
+    </section>
+
+    <section class="booking-form">
+        <h2>Reservation Form</h2>
+        <form action="/booking" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© {{.Year}} Spice Paradise. All rights reserved.</p>
+    </footer>
+</body>
+</html>

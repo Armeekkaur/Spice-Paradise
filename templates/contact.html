@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us - Spice Paradise</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+
+    {{template "nav" . }}
+
+    {{if .Message}}
+        <p style="color: green; text-align: center; background-color: #e6ffe6; padding: 10px; border-radius: 5px; margin: 15px auto; max-width: 80%;">{{.Message}}</p>
+    {{end}}
+    {{if .Error}}
+        <p style="color: red; text-align: center; background-color: #ffe6e6; padding: 10px; border-radius: 5px; margin: 15px auto; max-width: 80%;">{{.Error}}</p>
+    {{end}}
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Reach out to us using the details below.</p>
+
+    <div class="contact-info">
+        <div class="contact-item">
+            <h3>📍 Location</h3>
+            <p>Spice Paradise Restaurant<br>123 Flavor Street,<br>New Delhi, India 110001</p>
+        </div>
+
+        <div class="contact-item">
+            <h3>📞 Phone</h3>
+            <p>+91 98765 43210</p>
+        </div>
+
+        <div class="contact-item">
+            <h3>📧 Email</h3>
+            <p><a href="mailto:info@spiceparadise.in">info@spiceparadise.in</a></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© {{.Year}} Spice Paradise. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
