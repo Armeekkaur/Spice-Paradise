@@ -12,6 +12,12 @@ Spice Paradise is a Go-based web application for a restaurant. It allows users t
 *   Client-side cart functionality using `localStorage`.
 *   Authenticated order submission.
 *   Table booking form.
+##Screenshots
+![Screenshot (19)](https://github.com/user-attachments/assets/6c77bb55-ae91-4e9b-bc41-8ef5f67f2600)
+![Screenshot (20)](https://github.com/user-attachments/assets/bc2c5c69-addc-4f96-a02d-114715f7855f)
+![Screenshot (21)](https://github.com/user-attachments/assets/e07d9248-d6dc-4097-8331-aebb4c1dec7a)
+![Screenshot (22)](https://github.com/user-attachments/assets/4bd755d5-eb70-4b42-b5f1-5eec1dfa7d21)
+
 
 ## Project Structure
 
